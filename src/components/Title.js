@@ -33,17 +33,15 @@ const Title = ({ showSearch, setShowSearch, setSearchString }) => {
 				</div>
 			) : (
 				<motion.div
-					className='w-10 h-10 neumorphism-small flex justify-center items-center'
+					className='w-10 h-10 neumorphism-small flex justify-center items-center cursor-pointer'
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.9 }}
+					onClick={() => {
+						setShowSearch(true);
+						setSearchString('');
+					}}
 				>
-					<MdSearch
-						className='cursor-pointer text-2xl'
-						onClick={() => {
-							setShowSearch(true);
-							setSearchString('');
-						}}
-					/>
+					<MdSearch className='text-2xl' />
 				</motion.div>
 			)}
 		</div>

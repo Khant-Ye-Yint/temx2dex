@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import TemDetailTitle from '../components/TemDetailTitle';
+import TemtemStats from '../components/TemtemStats';
+
 import Loading from '../components/Loading';
 
 import { SpecificTemApi } from '../Api';
@@ -51,66 +53,7 @@ const TemtemDetail = ({ match }) => {
 							))}
 						</div>
 					</div>
-					<div className='flex flex-col justify-center items-center space-y-3 w-full'>
-						<h1 className='text-2xl text-green font-bold'>Stats</h1>
-						<div className='stat-row'>
-							<h1 className='text-green text-xl'>HP</h1>
-							<h1 className='text-green text-xl'>{data.stats.hp}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.hp}%` }}
-							></span>
-
-							<h1 className='text-green text-xl'>STA</h1>
-							<h1 className='text-green text-xl'>{data.stats.sta}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.sta}%` }}
-							></span>
-
-							<h1 className='text-green text-xl'>SPD</h1>
-							<h1 className='text-green text-xl'>{data.stats.spd}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.spd}%` }}
-							></span>
-
-							<h1 className='text-green text-xl'>ATK</h1>
-							<h1 className='text-green text-xl'>{data.stats.atk}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.atk}%` }}
-							></span>
-
-							<h1 className='text-green text-xl'>DEF</h1>
-							<h1 className='text-green text-xl'>{data.stats.def}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.def}%` }}
-							></span>
-
-							<h1 className='text-green text-xl'>SPATK</h1>
-							<h1 className='text-green text-xl'>{data.stats.spatk}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.spatk}%` }}
-							></span>
-
-							<h1 className='text-green text-xl'>SPDEF</h1>
-							<h1 className='text-green text-xl'>{data.stats.spdef}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.spdef}%` }}
-							></span>
-
-							<h1 className='text-green text-xl'>TOTAL</h1>
-							<h1 className='text-green text-xl'>{data.stats.total}</h1>
-							<span
-								className='h-6 bg-yellow col-span-2'
-								style={{ width: `${data.stats.total / 7}%` }}
-							></span>
-						</div>
-					</div>
+					<TemtemStats stats={data.stats} />
 				</motion.div>
 			)}
 		</div>
