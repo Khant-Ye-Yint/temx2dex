@@ -26,7 +26,7 @@ const TemtemDetail = ({ match }) => {
 				<Loading />
 			) : (
 				<motion.div
-					className='flex flex-col justify-center items-center space-y-10 w-full'
+					className='flex flex-col justify-center items-center space-y-10 w-full sm:space-y-5'
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1 }}
@@ -53,60 +53,60 @@ const TemtemDetail = ({ match }) => {
 					</div>
 					<div className='flex flex-col justify-center items-center space-y-3 w-full'>
 						<h1 className='text-2xl text-green font-bold'>Stats</h1>
-						<div className='stat-row w-1/2'>
+						<div className='stat-row'>
 							<h1 className='text-green text-xl'>HP</h1>
 							<h1 className='text-green text-xl'>{data.stats.hp}</h1>
 							<span
-								className='h-6 bg-yellow'
+								className='h-6 bg-yellow col-span-2'
 								style={{ width: `${data.stats.hp}%` }}
 							></span>
 
 							<h1 className='text-green text-xl'>STA</h1>
 							<h1 className='text-green text-xl'>{data.stats.sta}</h1>
 							<span
-								className='h-6 bg-yellow'
+								className='h-6 bg-yellow col-span-2'
 								style={{ width: `${data.stats.sta}%` }}
 							></span>
 
 							<h1 className='text-green text-xl'>SPD</h1>
 							<h1 className='text-green text-xl'>{data.stats.spd}</h1>
 							<span
-								className='h-6 bg-yellow'
-								style={{ width: `${data.stats.apd}%` }}
+								className='h-6 bg-yellow col-span-2'
+								style={{ width: `${data.stats.spd}%` }}
 							></span>
 
 							<h1 className='text-green text-xl'>ATK</h1>
 							<h1 className='text-green text-xl'>{data.stats.atk}</h1>
 							<span
-								className='h-6 bg-yellow'
+								className='h-6 bg-yellow col-span-2'
 								style={{ width: `${data.stats.atk}%` }}
 							></span>
 
 							<h1 className='text-green text-xl'>DEF</h1>
 							<h1 className='text-green text-xl'>{data.stats.def}</h1>
 							<span
-								className='h-6 bg-yellow'
+								className='h-6 bg-yellow col-span-2'
 								style={{ width: `${data.stats.def}%` }}
 							></span>
 
 							<h1 className='text-green text-xl'>SPATK</h1>
 							<h1 className='text-green text-xl'>{data.stats.spatk}</h1>
 							<span
-								className='h-6 bg-yellow'
+								className='h-6 bg-yellow col-span-2'
 								style={{ width: `${data.stats.spatk}%` }}
 							></span>
 
 							<h1 className='text-green text-xl'>SPDEF</h1>
 							<h1 className='text-green text-xl'>{data.stats.spdef}</h1>
 							<span
-								className='h-6 bg-yellow'
+								className='h-6 bg-yellow col-span-2'
 								style={{ width: `${data.stats.spdef}%` }}
 							></span>
 
 							<h1 className='text-green text-xl'>TOTAL</h1>
 							<h1 className='text-green text-xl'>{data.stats.total}</h1>
 							<span
-								className='h-6 bg-yellow'
+								className='h-6 bg-yellow col-span-2'
 								style={{ width: `${data.stats.total / 7}%` }}
 							></span>
 						</div>
